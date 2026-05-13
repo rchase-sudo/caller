@@ -1,3 +1,11 @@
+import cors from 'cors'
+
+app.use(cors({
+    origin: 'https://apollodevelopment.io',
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}))
+
 import express from 'express'
 import { createServer } from 'http'
 import { WebSocketServer } from 'ws'
