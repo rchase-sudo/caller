@@ -1,11 +1,4 @@
 import cors from 'cors'
-
-app.use(cors({
-    origin: 'https://apollodevelopment.io',
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}))
-
 import express from 'express'
 import { createServer } from 'http'
 import { WebSocketServer } from 'ws'
@@ -14,6 +7,12 @@ import Anthropic from '@anthropic-ai/sdk'
 import { createClient } from '@supabase/supabase-js'
 import fetch from 'node-fetch'
 
+
+app.use(cors({
+    origin: 'https://apollodevelopment.io',
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}))
 
 const app = express()
 app.use(express.json())
